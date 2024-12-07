@@ -10,7 +10,9 @@ export const Hero = () => {
             sequence={[
               'Hi, I\'m Mahir Salahin',
               1000,
-              'I\'m a Full-stack Developer',
+              'I\'m a Problem Solver',
+              1000,
+              'I\'m a Full-Stack Developer',
               1000,
               'I\'m a Python Expert',
               1000,
