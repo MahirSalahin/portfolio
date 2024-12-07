@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-text-primary;
+  }
+}
+
+.section-padding {
+  @apply py-20 px-4 md:px-8 lg:px-16;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.project-card {
+  @apply relative overflow-hidden rounded-lg transition-transform duration-300 hover:-translate-y-2;
+}
+
+.project-overlay {
+  @apply absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-300 flex items-center justify-center;
+}
+
+.project-card:hover .project-overlay {
+  @apply opacity-100;
+}
