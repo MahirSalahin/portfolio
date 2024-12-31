@@ -1,53 +1,128 @@
+import { motion } from 'framer-motion';
+
 export const About = () => {
   return (
-    <section id="about" className="py-32 bg-white">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-gray-800">
+    <section id="about" className="relative py-32 bg-gradient-to-b from-white to-gray-50 dark:from-dark-900 dark:to-dark-800">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-secondary-500/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-4xl mx-auto px-4">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-bold mb-16 text-center text-gray-800 dark:text-white"
+        >
           About Me
-        </h2>
+        </motion.h2>
+
         <div className="space-y-12">
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-          I'm a full-stack developer who thrives on solving real-world problems through innovative technology. With a strong focus on backend development, I work primarily with Python, leveraging frameworks like FastAPI, Django, and GraphQL to build efficient and scalable systems. For data management, I rely on PostgreSQL and Supabase, ensuring the reliability and performance of my applications. On the front end, I have experience with Flutter and React, allowing me to create user-friendly interfaces when needed. I also have a deep understanding of data structures and algorithms, which I apply to competitive programming, particularly through LeetCode challenges. I'm constantly exploring new technologies and enjoy taking on projects that allow me to push my limits, build creative solutions, and make a meaningful impact. Whether it's optimizing backend performance or crafting intuitive UIs, I’m always eager to learn and innovate.
-          </p>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+          >
+            I'm a full-stack developer who thrives on solving real-world problems through innovative technology. With a strong focus on backend development, I work primarily with Python, leveraging frameworks like FastAPI, Django, and GraphQL to build efficient and scalable systems. For data management, I rely on PostgreSQL and Supabase, ensuring the reliability and performance of my applications. On the front end, I have experience with Flutter and React, allowing me to create user-friendly interfaces when needed. I also have a deep understanding of data structures and algorithms, which I apply to competitive programming, particularly through LeetCode challenges. I'm constantly exploring new technologies and enjoy taking on projects that allow me to push my limits, build creative solutions, and make a meaningful impact. Whether it's optimizing backend performance or crafting intuitive UIs, I'm always eager to learn and innovate.
+          </motion.p>
           
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold text-gray-800 text-center">Technical Skills</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-semibold text-lg mb-3 text-gray-800">Languages</h4>
-                <p className="text-gray-600">Python, Java, C#, C++, Dart, JavaScript, TypeScript</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-semibold text-lg mb-3 text-gray-800">Backend</h4>
-                <p className="text-gray-600">FastAPI, Django, NextJS, GraphQL</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-semibold text-lg mb-3 text-gray-800">Frontend</h4>
-                <p className="text-gray-600">React, NextJS, TailwindCSS</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-semibold text-lg mb-3 text-gray-800">Database</h4>
-                <p className="text-gray-600">MySQL, PostgreSQL</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-semibold text-lg mb-3 text-gray-800">Cloud</h4>
-                <p className="text-gray-600">Supabase, Firebase, GCP</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <h4 className="font-semibold text-lg mb-3 text-gray-800">AI & ML</h4>
-                <p className="text-gray-600">Langchain, Huggingface, Pytorch, Pandas</p>
-              </div>
-            </div>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-2xl font-semibold text-gray-800 dark:text-white text-center"
+            >
+              Technical Skills
+            </motion.h3>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-6"
+            >
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-dark-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-700"
+              >
+                <h4 className="font-semibold text-lg mb-3 text-gray-800 dark:text-white">Languages</h4>
+                <p className="text-gray-600 dark:text-gray-400">Python, Java, C#, C++, Dart, JavaScript, TypeScript</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-dark-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-700"
+              >
+                <h4 className="font-semibold text-lg mb-3 text-gray-800 dark:text-white">Backend</h4>
+                <p className="text-gray-600 dark:text-gray-400">FastAPI, Django, NextJS, GraphQL</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-dark-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-700"
+              >
+                <h4 className="font-semibold text-lg mb-3 text-gray-800 dark:text-white">Frontend</h4>
+                <p className="text-gray-600 dark:text-gray-400">React, NextJS, TailwindCSS</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-dark-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-700"
+              >
+                <h4 className="font-semibold text-lg mb-3 text-gray-800 dark:text-white">Database</h4>
+                <p className="text-gray-600 dark:text-gray-400">MySQL, PostgreSQL</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-dark-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-700"
+              >
+                <h4 className="font-semibold text-lg mb-3 text-gray-800 dark:text-white">Cloud</h4>
+                <p className="text-gray-600 dark:text-gray-400">Supabase, Firebase, GCP</p>
+              </motion.div>
+              <motion.div 
+                whileHover={{ y: -5 }}
+                className="bg-white dark:bg-dark-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-700"
+              >
+                <h4 className="font-semibold text-lg mb-3 text-gray-800 dark:text-white">AI & ML</h4>
+                <p className="text-gray-600 dark:text-gray-400">Langchain, Huggingface, Pytorch, Pandas</p>
+              </motion.div>
+            </motion.div>
           </div>
           
-          <div className="text-center pt-8">
-            <a
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-center pt-8"
+          >
+            <motion.a
               href="#projects"
-              className="inline-block bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity duration-300 text-white font-semibold py-4 px-12 rounded-lg text-xl"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 px-8 py-3 text-base font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 rounded-lg hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-xl"
             >
               View Work
-            </a>
-          </div>
+              <svg 
+                className="w-4 h-4" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M17 8l4 4m0 0l-4 4m4-4H3" 
+                />
+              </svg>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
     </section>
