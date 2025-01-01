@@ -134,7 +134,7 @@ export const Hero = () => {
                       isDark ? 'bg-dark-900' : 'bg-white'
                     }`}>
                       <img
-                        src="/hero-portrait.jpg"
+                        src="/assets/hero-portrait.jpg"
                         alt="Portrait"
                         className="rounded-full w-full aspect-square object-cover"
                       />
