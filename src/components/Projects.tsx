@@ -36,18 +36,18 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-32 bg-gray-100">
+    <section id="projects" className="py-12 bg-gray-100">
       <div className="max-w-6xl mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold mb-16 text-center text-gray-800 dark:text-white"
+          className="text-4xl md:text-5xl font-bold mb-8 mt-8 text-center bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent"
         >
           Projects
         </motion.h2>
-        <div className="grid grid-cols-1 gap-16">
+        <div className="grid grid-cols-1 gap-12">
           {projects.map((project, index) => (
             <div key={index} className={`flex flex-col md:flex-row items-center gap-8 ${
               index % 2 === 1 ? 'md:flex-row-reverse' : ''

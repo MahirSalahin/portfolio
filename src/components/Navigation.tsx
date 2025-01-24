@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
-import { Home, User, Code, Mail, Menu, X } from 'lucide-react';
+import { Home, User, Code, Mail, Menu, X, Code2 } from 'lucide-react';
 
 const NavItem = ({ href, label, icon: Icon, isMobile = false }: { href: string; label: string; icon: any; isMobile?: boolean }) => {
   return (
@@ -87,6 +87,7 @@ export const Navigation = () => {
           <div className="hidden md:flex md:items-center md:space-x-1">
             <NavItem href="#" label="Home" icon={Home} />
             <NavItem href="#about" label="About" icon={User} />
+            <NavItem href="#cp" label="CP" icon={Code2} />
             <NavItem href="#projects" label="Projects" icon={Code} />
             <NavItem href="#contact" label="Contact" icon={Mail} />
           </div>
@@ -125,6 +126,7 @@ export const Navigation = () => {
               <NavItem href="#" label="Home" icon={Home} isMobile />
               <NavItem href="#about" label="About" icon={User} isMobile />
               <NavItem href="#projects" label="Projects" icon={Code} isMobile />
+              <NavItem href="#cp" label="CP" icon={Code2} isMobile />
               <NavItem href="#contact" label="Contact" icon={Mail} isMobile />
             </div>
           </div>
