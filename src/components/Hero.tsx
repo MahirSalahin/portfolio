@@ -1,4 +1,4 @@
-import { motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Github, Linkedin, Mail, ChevronDown, ExternalLink } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -237,17 +237,17 @@ export const Hero = () => {
                 className="flex items-center gap-4 justify-center lg:justify-start pt-4"
               >
                 <SocialLink
-                  href="https://github.com/yourusername"
+                  href="https://github.com/MahirSalahin"
                   icon={Github}
                   label="GitHub Profile"
                 />
                 <SocialLink
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://linkedin.com/in/mahir-salahin"
                   icon={Linkedin}
                   label="LinkedIn Profile"
                 />
                 <SocialLink
-                  href="mailto:your.email@example.com"
+                  href="mailto:mahirsalahin01@gmail.com"
                   icon={Mail}
                   label="Email Contact"
                 />
