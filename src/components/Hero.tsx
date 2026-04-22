@@ -127,7 +127,7 @@ export const Hero = () => {
                     <div className={`rounded-full p-2 ${isDark ? 'bg-dark-900' : 'bg-white'
                       }`}>
                       <img
-                        src="/assets/hero-portrait.jpg"
+                        src="/assets/hero.JPG"
                         alt="Portrait"
                         className="rounded-full w-full aspect-square object-cover"
                       />
