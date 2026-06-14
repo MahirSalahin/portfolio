@@ -18,7 +18,7 @@ const platforms: Platform[] = [
     name: "LeetCode",
     handle: "zorlan",
     rating: "1900+",
-    solved: 500,
+    solved: 700,
     rank: "Knight",
     link: "https://leetcode.com/zorlan/",
     color: "from-[#FFA116] to-[#FF6B6B]",
@@ -27,7 +27,7 @@ const platforms: Platform[] = [
     name: "CodeForces",
     handle: "sorcerer_21",
     rating: "1400+",
-    solved: 600,
+    solved: 700,
     rank: "Specialist",
     link: "https://codeforces.com/profile/sorcerer_21",
     color: "from-[#1890FF] to-[#36CFC9]",
@@ -37,7 +37,7 @@ const platforms: Platform[] = [
 const stats = [
   {
     label: "Problems Solved",
-    value: 1200,
+    value: 1700,
     icon: FaCode,
     color: "from-emerald-500 to-teal-500",
   },
